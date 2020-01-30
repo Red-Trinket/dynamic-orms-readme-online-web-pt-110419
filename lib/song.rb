@@ -21,6 +21,10 @@ class Song
     SQL
     DB[:conn].execute(sql)
   end 
+  
+  def self.table_name
+    self.to_s.downcase.pluralize 
+  end 
 
   def self.table_name
     self.to_s.downcase.pluralize
